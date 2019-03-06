@@ -21,7 +21,7 @@ def train_with_reg_cv(trX, trY, vaX, vaY, teX=None, teY=None, penalty='l1',
         score = model.score(teX, teY)*100.
     else:
         score = model.score(vaX, vaY)*100.
-    return score, c, nnotzero
+    return score, c, nnotzero, model
 
 
 def load_sst(path):
